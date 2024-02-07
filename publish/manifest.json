@@ -1,0 +1,9 @@
+{
+    "name": "PersonalBossPowers",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/gdragon-git/PersonalBossPowers",
+    "description": "Boss Stones have boss heads added only for players near a boss kill granting them Personal Boss Powers.",
+    "dependencies": [
+        "denikson-BepInExPack_Valheim-5.4.2202"
+    ]
+}
