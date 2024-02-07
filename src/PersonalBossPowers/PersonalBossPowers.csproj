@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{32A74760-D7C1-448D-ADB3-E08BB02D9E15}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>PersonalBossPowers</RootNamespace>
+        <AssemblyName>PersonalBossPowers</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>latestmajor</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony">
+          <HintPath>..\..\ItemDrawers\Libs\0Harmony.dll</HintPath>
+        </Reference>
+        <Reference Include="assembly_guiutils">
+          <HintPath>..\..\ItemDrawers\Libs\assembly_guiutils.dll</HintPath>
+        </Reference>
+        <Reference Include="assembly_postprocessing">
+          <HintPath>..\..\ItemDrawers\Libs\assembly_postprocessing.dll</HintPath>
+        </Reference>
+        <Reference Include="assembly_utils">
+          <HintPath>..\..\ItemDrawers\Libs\assembly_utils.dll</HintPath>
+        </Reference>
+        <Reference Include="assembly_valheim">
+          <HintPath>..\..\ItemDrawers\Libs\assembly_valheim.dll</HintPath>
+        </Reference>
+        <Reference Include="BepInEx">
+          <HintPath>..\..\ItemDrawers\Libs\BepInEx.dll</HintPath>
+        </Reference>
+        <Reference Include="fastJSON">
+          <HintPath>..\..\ItemDrawers\Libs\fastJSON.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="ui_lib">
+          <HintPath>..\..\ItemDrawers\Libs\ui_lib.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+          <HintPath>..\..\ItemDrawers\Libs\Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.AnimationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AssetBundleModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.AssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.AudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.ImageConversionModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputLegacyModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.InputLegacyModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.ParticleSystemModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.UIElementsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsNativeModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.UIElementsNativeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+          <HintPath>..\..\ItemDrawers\Libs\UnityEngine.UIModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="PersonalBossPowers.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="ServerSync.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
